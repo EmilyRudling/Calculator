@@ -1,4 +1,6 @@
 package com.example.calculator;
+import java.util.Scanner; //allows me to read user input
+import java.util.Random; //allows me to use the random number feature
 
 public class Calculator {
     public static void main(String[] args) {
@@ -23,19 +25,14 @@ public class Calculator {
         switch (maths){
             case "+":
                 return Integer.toString(int1 + int2);
-            break;
             case "-":
                 return Integer.toString(int1 - int2);
-            break;
             case "*":
                 return Integer.toString(int1 * int2);
-            break;
             case "/":
-                return Integer.toString(int1 / int2);
-            break;
+                return Integer.toString(int1 / int2); //did not need the break statements, return does this already
             default:
                 return "That is not a valid input";
-            break;
         }
     }
 }
