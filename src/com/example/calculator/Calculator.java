@@ -5,18 +5,16 @@ import java.util.Random; //allows me to use the random number feature
 public class Calculator {
     public static void main(String[] args) {
         System.out.println("welcome to the calculator!");
-        int rand1 = getNumber();
-        int rand2 = getNumber();
-        System.out.println("Number 1" + rand1);
+        int first = getNumber();
         System.out.println("Enter add(+), subtract(-), multiply(*) or divide(/): ");
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
-        System.out.println("Number 2" + rand2);
-        System.out.println(calculateResult(rand1, rand2, input));
+        int second = getNumber();
+        System.out.println(calculateResult(first, second, input));
     }
 
     public static int getNumber() {
-        System.out.println("Enter the first integer");
+        System.out.println("Enter an integer: ");
         Scanner scanner = new Scanner(System.in);
         String number = scanner.next();
         return Integer.parseInt(number); //converts a string to an integer
