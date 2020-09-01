@@ -10,7 +10,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
         int second = getNumber();
-        System.out.println(calculateResult(first, second, input));
+        System.out.println(first + input + second + "=" + calculateResult(first, second, input));
     }
 
     public static int getNumber() {
@@ -22,6 +22,8 @@ public class Calculator {
 
     public static String calculateResult(int int1, int int2, String maths){
         switch (maths){
+            case "done":
+                return "ok"; //print result
             case "+":
                 return Integer.toString(int1 + int2);
             case "-":
